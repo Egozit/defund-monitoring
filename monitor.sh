@@ -46,7 +46,7 @@ else
         # Peers count
         peers_num=$(curl -s localhost:${COS_PORT_RPC}/net_info | jq -r '.result.peers[].node_info | [.id, .moniker] | @csv' | wc -l)
         # Prepare metiric to out
-        logentry=$logentry" ver=$version,block_height=$block_height,catching_up=$catching_up,time_since_block=$time_since_block,latest_block_time=$latest_block_time,peers_num=$peers_num,voting_power=$voting_power"
+        logentry=$logentry" ver=\"$version\",block_height=$block_height,catching_up=$catching_up,time_since_block=$time_since_block,latest_block_time=$latest_block_time,peers_num=$peers_num,voting_power=$voting_power"
         # Common validator statistic
         list_limit=3000
         # Numbers of active validators
