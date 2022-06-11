@@ -10,6 +10,8 @@ Advantages  of using our free service:
 * No need to install and configure  Grafana Dashboard
 * On Grafana dashboard you will find all necessary metrics of your node (we use this monitoring service by ourselves, so we've configured dashboard properly)
 
+## Community dashboard by L0vd.com
+[Dashboard link](http://95.216.2.219:3000/d/DeFund/defund-monitoring-by-l0vd?orgId=1&from=now-1h&to=now)
 
 ## Manual installation of telegraf and monitoring script
 
