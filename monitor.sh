@@ -7,10 +7,10 @@ source ./variables.sh
 now=$(date +%s%N)
 
 # fill header
-logentry="archway"
+logentry="defund"
 if [ -n "${COS_VALOPER}" ]; then logentry=$logentry",valoper=${COS_VALOPER}"; fi
 
-# Get archway version
+# Get defund version
 version=$(${COS_BIN_NAME} version 2>&1)
 
 # health is great by default
@@ -70,7 +70,7 @@ else
             if [ $(jq -r '.status' <<<$val_status) == "BOND_STATUS_UNBONDING" ]; then bonded=1; fi
             if [ $(jq -r '.status' <<<$val_status) == "BOND_STATUS_BONDED" ]; then bonded=0; fi
 
-            # Missing blocks number in window (in archway slashing window size = 10000 blocks)
+            # Missing blocks number in window (in defund slashing window size = 10000 blocks)
             bl_missed=$(jq -r '.missed_blocks_counter' <<<$($COS_BIN_NAME q slashing signing-info $($COS_BIN_NAME tendermint show-validator) -o json --node "tcp://localhost:${COS_PORT_RPC}"))
             if [ -z "$bl_missed" ]; then bl_missed=0; fi
             # Get validator statistic
