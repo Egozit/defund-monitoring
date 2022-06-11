@@ -30,7 +30,7 @@ sudo apt -y install telegraf
 sudo systemctl enable --now telegraf
 sudo systemctl is-enabled telegraf
 
-# make the telegraf user sudo and adm to be able to execute scripts as archway user
+# make the telegraf user sudo and adm to be able to execute scripts as defund user
 sudo adduser telegraf sudo
 sudo adduser telegraf adm
 sudo -- bash -c 'echo "telegraf ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers'
@@ -43,15 +43,15 @@ Status can be not ok with default Telegraf's config. Next steps will fix it.
 
 Clone this project repo and copy variable script template
 ```
-git clone https://github.com/Egozit/archway-monitoring.git
-cd archway-monitoring
+git clone https://github.com/Egozit/defund-monitoring.git
+cd defund-monitoring
 nano variables.sh
 ```
 
 Insert your parameters to **variables.sh**:
-* full path to archway binary to COS_BIN_NAME ( check ```which archwayd```)
-* node PRC port to COS_PORT_RPC ( check in file ```path_to_archway_node_config/config/config.toml```)
-* node validator address to COS_VALOPER ( like ```archwayvaloper********```)
+* full path to defund binary to COS_BIN_NAME ( check ```which defundd```)
+* node PRC port to COS_PORT_RPC ( check in file ```path_to_defund_node_config/config/config.toml```)
+* node validator address to COS_VALOPER ( like ```defundvaloper********```)
 
 Save changes in variables.sh and enable execution permissions:
 
@@ -73,7 +73,7 @@ Set you name to identify yourself in grafana dashboard and check correctness of 
 ...
 ...
 [[inputs.exec]]
-  commands = ["sudo su -c /root/archway-monitoring/monitor.sh -s /bin/bash root"] # change path to your monitor.sh file and username to the one that validator runs at (e.g. root)
+  commands = ["sudo su -c /root/defund-monitoring/monitor.sh -s /bin/bash root"] # change path to your monitor.sh file and username to the one that validator runs at (e.g. root)
   interval = "15s"
   timeout = "5s"
   data_format = "influx"
@@ -123,7 +123,7 @@ Validator voting power. If the value of this parameter is zero, your node isn't 
 Number of delegated tokens
 
 ### Version
-Version of archwayd binary
+Version of defundd binary
 
 ### Vali Rank
 Your node stake rank 
