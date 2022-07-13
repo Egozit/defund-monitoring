@@ -79,7 +79,7 @@ Set you name to identify yourself in grafana dashboard and check correctness of 
   interval = "15s"
   timeout = "5s"
   data_format = "influx"
-  data_type = "integer""
+  data_type = "integer"
 ```
 
 ## Dashboard interface 
