@@ -11,7 +11,8 @@ Advantages  of using our free service:
 * On Grafana dashboard you will find all necessary metrics of your node (we use this monitoring service by ourselves, so we've configured dashboard properly)
 
 ## Community dashboard by L0vd.com
-Check out our free community dashboard: [Dashboard link](http://95.216.2.219:3000/d/DeFund/defund-monitoring-by-l0vd?orgId=1&from=now-1h&to=now)
+Check out our free community dashboard: 
+# [Dashboard link](http://95.216.2.219:3000/d/DeFund/defund-monitoring-by-l0vd?orgId=1&from=now-1h&to=now)
 
 ## Manual installation of telegraf and monitoring script
 
@@ -86,7 +87,8 @@ Set you name to identify yourself in grafana dashboard and check correctness of 
 
 Dashboard has main cosmos-based node information and common system metrics. There is a description for each metric.
 
-Go to our comunity dashboard and select you node from the server list: [Dashboard link](http://95.216.2.219:3000/d/DeFund/defund-monitoring-by-l0vd?orgId=1&from=now-1h&to=now)
+Go to our comunity dashboard and select you node from the server list: 
+## [Dashboard link](http://95.216.2.219:3000/d/DeFund/defund-monitoring-by-l0vd?orgId=1&from=now-1h&to=now)
 
 
 ![Screenshot_1](https://user-images.githubusercontent.com/43213686/169405751-8ff53124-e128-4078-8d68-229a18ea4e25.png)
